@@ -1,0 +1,41 @@
+<div class="page-header">
+	<h1>Personal Project Manager</h1>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+	  <div class="well bs-component">
+	  	<div class="form-horizontal">
+		    <fieldset>
+		      <legend>Sign In</legend>
+	        <%= form_for(:user, :url => session_path(:user)) do |f| %>
+	 					<div class="form-group">
+	            <label class="col-lg-2 control-label">Email</label>
+	            <div class="col-lg-10">
+							  <%= f.text_field :email, class: "form-control" %>
+							</div>
+						</div>
+						<div class="form-group">
+	            <label class="col-lg-2 control-label">Password</label>
+	            <div class="col-lg-10">
+	              <%= f.password_field :password, class: "form-control" %>
+	              <%= f.check_box :remember_me %>
+								<%= f.label :remember_me %>
+	            </div>
+	          </div>
+	          <div class="form-group">
+	            <div class="col-lg-10 col-lg-offset-2">
+	              <%= f.submit 'Sign in', class: "btn btn-primary" %>     
+	              <%= link_to "Sign In with Facebook", user_omniauth_authorize_path(:facebook), class: "btn btn-primary" %> 
+	            </div>
+	          </div>
+	  				<%= link_to "Forgot your password?", new_password_path(:user) %>
+	  			<% end %>
+	      </fieldset>
+			</div>
+	 	</div>
+  </div>
+  <div class="col-md-6">
+  	guyuyuy
+  </div>
+</div>

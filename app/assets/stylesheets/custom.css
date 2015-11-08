@@ -1,0 +1,21 @@
+.box {
+	margin-top: 60px;
+}
+.panel-title {
+	font-weight: bold;
+}
+.margintop {
+	margin-top: 22px;
+}
+h1 {
+	font-size: 50px;
+}
+li {
+	list-style: none;
+}
+ul {
+	-webkit-padding-start: 0;
+}
+footer {
+	font-size: 0.8em;
+}
