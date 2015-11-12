@@ -3,7 +3,11 @@ Rails.application.routes.draw do
   get 'pages/dashboard'
 
   resources :tasks
-  resources :projects
+  resources :projects do
+    member do
+      put :change
+    end
+  end
 
   root 'pages#home'
 

@@ -43,28 +43,24 @@
 		      <legend>Sign Up</legend>
 					<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
 					  <%= devise_error_messages! %>
-
 					  <div class="form-group">
 	            <label class="col-lg-2 control-label">Email</label>
 	            <div class="col-lg-10">
 							  <%= f.email_field :email, class: "form-control" %>
 							</div>
 						</div>
-
 					  <div class="form-group">
 	            <label class="col-lg-2 control-label">Password</label>
 	            <div class="col-lg-10">
 					  	<%= f.password_field :password, class: "form-control" %>
 					  	</div>
 					  </div>
-
 					  <div class="form-group">
 	            <label class="col-lg-2 control-label">Password</label>
 	            <div class="col-lg-10">
 						  <%= f.password_field :password_confirmation, class: "form-control" %>
 						  </div>
 					  </div>
-
 					  <div class="form-group">
 	            <div class="col-lg-10 col-lg-offset-2">
 					  		<%= f.submit "Sign up", class: "btn btn-primary" %>

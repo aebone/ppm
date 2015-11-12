@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
-	before_filter :authenticate_user!, except: [:home]
+	before_filter :authenticate_user!, except: [:home, :test]
+  respond_to :html
 
   def home
   	if user_signed_in?
@@ -8,7 +9,11 @@ class PagesController < ApplicationController
   end
 
   def dashboard
-  	@projects = Project.all
+  	@to_do = Project.where(situation: "To-Do")
+    @doing = Project.where(situation: "Doing")
+    @done = Project.where(situation: "Done")
   	@tasks = Task.all
+    respond_with(@projects)
   end
+
 end

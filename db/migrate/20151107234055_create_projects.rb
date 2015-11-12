@@ -4,7 +4,7 @@ class CreateProjects < ActiveRecord::Migration
       t.string :title
       t.text :description
       t.date :expectedDate
-      t.string :situation
+      t.string :situation, default: "To-Do"
 
       t.timestamps null: false
     end

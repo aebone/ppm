@@ -1,0 +1,17 @@
+<div class="item">
+  <div class="well well-sm">
+    <%= link_to project.title, edit_project_path(project), class: "link-title" %>
+    <%= link_to "x", project_path(project), method: :delete, data: {confirm: "Are you sure?"}, class: "pull-right link-title" %>
+  </div>
+
+  <% if project.situation == "Doing" %>
+    <div class="btn-group btn-group-justified">
+      <%= link_to "&larr;".html_safe, change_project_path(project, situation: "To-Do"), method: :put, class: "btn btn-primary btn-sm btn-block" %>
+      <%= link_to "&rarr;".html_safe, change_project_path(project, situation: "Done"), method: :put, class: "btn btn-primary btn-sm btn-block" %>
+    </div>
+  <% elsif  project.situation == "Done"%>
+    <%= link_to "&larr;".html_safe, change_project_path(project, situation: "Doing"), method: :put, class: "btn btn-primary btn-sm btn-block" %>
+  <% else %>
+    <%= link_to "&rarr;".html_safe, change_project_path(project, situation: "Doing"), method: :put, class: "btn btn-primary btn-sm btn-block"%>
+  <% end %>
+</div>
