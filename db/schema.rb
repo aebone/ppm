@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151108075740) do
+ActiveRecord::Schema.define(version: 20151112072736) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,10 +20,13 @@ ActiveRecord::Schema.define(version: 20151108075740) do
     t.string   "title"
     t.text     "description"
     t.date     "expectedDate"
-    t.string   "situation"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.string   "situation",    default: "To-Do"
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+    t.integer  "user_id"
   end
+
+  add_index "projects", ["user_id"], name: "index_projects_on_user_id", using: :btree
 
   create_table "tasks", force: :cascade do |t|
     t.string   "title"
@@ -51,11 +54,11 @@ ActiveRecord::Schema.define(version: 20151108075740) do
     t.datetime "updated_at",                          null: false
     t.string   "provider"
     t.string   "uid"
-    t.string   "name"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "projects", "users"
   add_foreign_key "tasks", "projects"
 end

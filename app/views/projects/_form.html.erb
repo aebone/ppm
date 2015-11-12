@@ -2,32 +2,31 @@
   <% if @project.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@project.errors.count, "error") %> prohibited this project from being saved:</h2>
-
-      <ul>
       <% @project.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+        <%= message %>
       <% end %>
-      </ul>
     </div>
   <% end %>
 
+
   <div class="field">
     <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, class: "form-control" %>
   </div>
   <div class="field">
     <%= f.label :description %><br>
-    <%= f.text_area :description %>
+    <%= f.text_area :description, class: "form-control" %>
   </div>
   <div class="field">
-    <%= f.label :expectedDate %><br>
-    <%= f.date_select :expectedDate %>
+    <%= f.label :expected_date %><br>
+    <%= f.date_select :expectedDate, {}, {:class => "form-control-date"}  %>
   </div>
   <div class="field">
     <%= f.label :situation %><br>
-    <%= f.select :situation, [["To-Do", "To-Do"], ["Doing", "Doing"], ["Done", "Done"]] %>
+    <%= f.select :situation, [["To-Do", "To-Do"], ["Doing", "Doing"], ["Done", "Done"]], {}, {:class => "form-control"} %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class: "btn btn-primary" %>
   </div>
+
 <% end %>

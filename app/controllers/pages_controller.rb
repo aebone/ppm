@@ -9,10 +9,10 @@ class PagesController < ApplicationController
   end
 
   def dashboard
-  	@to_do = Project.where(situation: "To-Do")
-    @doing = Project.where(situation: "Doing")
-    @done = Project.where(situation: "Done")
-  	@tasks = Task.all
+  	@to_do = current_user.projects.where(situation: "To-Do")
+    @doing = current_user.projects.where(situation: "Doing")
+    @done = current_user.projects.where(situation: "Done")
+  	@tasks =  Task.all
     respond_with(@projects)
   end
 

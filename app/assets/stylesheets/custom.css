@@ -1,5 +1,5 @@
 .box {
-	margin-top: 60px;
+	margin-top: 40px;
 }
 .panel-title {
 	font-weight: bold;
@@ -19,19 +19,19 @@ ul {
 footer {
 	font-size: 0.8em;
 }
-a.btn.btn-default.btn-sm.btn-block {
+a.btn.btn-primary.btn-sm.btn-block {
   padding: 0px 0px;  
-  font-size: 18px;
+  font-size: 16px;
 }
 .well {	
 	margin-bottom: 0px;
+	border: 1px solid #008CBA;
 }
 .item {
 	margin-bottom: 10px;
 }
 .well-sm {
   padding: 5px;
-  font-size: 18px;
 }
 .link-title {
 	color: #008CBA;
@@ -50,4 +50,25 @@ a.btn.btn-default.btn-sm.btn-block {
   background: #3c9a5f;
   border-color: #70D696;
 }
+.field, .actions {
+	margin-top: 10px;
+}
+.form-control-date {
+    height: 39px;
+    padding: 8px 12px;
+    font-size: 15px;
+    line-height: 1.4;
+    color: #6f6f6f;
+    background-color: #ffffff;
+    background-image: none;
+    border: 1px solid #cccccc;
+    border-radius: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+h3 {
+	margin-bottom: 20px;
 }
