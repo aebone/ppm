@@ -72,3 +72,7 @@ a.btn.btn-primary.btn-sm.btn-block {
 h3 {
 	margin-bottom: 20px;
 }
+.table-header {
+  font-weight: bold;
+  margin-bottom: 6px;
+}

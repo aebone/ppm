@@ -59,9 +59,9 @@
 	<%= calendar_for(@tasks) do |t| %>
 		<%= t.head('SUN','MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT') %>
 			<%= t.day do |day, tasks| %>
-				<%= day.day %>
+				<%= day.day %><br>
 				<% tasks.each do |task| %>
-				<%= h(task.title) %>
+				<%= link_to h(task.title), edit_task_path(task) %><br>
 			<% end %>
 		<% end %>
 	<% end %>
