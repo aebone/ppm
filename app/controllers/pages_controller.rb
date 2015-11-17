@@ -12,7 +12,7 @@ class PagesController < ApplicationController
   	@to_do = current_user.projects.where(situation: "To-Do")
     @doing = current_user.projects.where(situation: "Doing")
     @done = current_user.projects.where(situation: "Done")
-  	@tasks =  Task.all
+  	@tasks = current_user.tasks.order("created_at")
     respond_with(@projects)
   end
 

@@ -12,7 +12,7 @@
   		<% if @project.tasks.present? %>
   		  <% @project.tasks.each do |task| %>
   		  	<p><strong><%= link_to task.title, task %></strong></p>
-  		  	<p><%= task.description %><br>
+  		  	<% if task.description.present? %><p><%= task.description %><br><% end %>
   		  	Date: <%= task.created_at.strftime("%F") %></p>
   		  	<hr>
   		  <% end %>

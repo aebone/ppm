@@ -19,13 +19,12 @@ ul {
 footer {
 	font-size: 0.8em;
 }
-a.btn.btn-primary.btn-sm.btn-block {
+a.btn.btn-success.btn-sm.btn-block {
   padding: 0px 0px;  
   font-size: 16px;
 }
 .well {	
 	margin-bottom: 0px;
-	border: 1px solid #008CBA;
 }
 .item {
 	margin-bottom: 10px;
@@ -43,12 +42,15 @@ a.btn.btn-primary.btn-sm.btn-block {
 }
 .panel-body {
   padding: 15px;
-  background-color: rgba(0, 140, 186, 0.3);
 }
 .panel-success>.panel-heading {
   color: #ffffff;
   background: #3c9a5f;
-  border-color: #70D696;
+  border: none;
+}
+.panel-success {
+    border: none;
+    background-color: rgba(60, 154, 95, 0.12);
 }
 .field, .actions {
 	margin-top: 10px;
