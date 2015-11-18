@@ -31,6 +31,8 @@ gem "watu_table_builder", :require => "table_builder"
 
 gem 'omniauth-facebook'
 
+gem "brakeman", :require => false
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'

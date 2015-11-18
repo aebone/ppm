@@ -11,7 +11,7 @@
   	<h3>Related Tasks</h3>
   		<% if @project.tasks.present? %>
   		  <% @project.tasks.each do |task| %>
-  		  	<p><strong><%= link_to task.title, task %></strong></p>
+  		  	<p><strong><%= link_to task.title, edit_task_path %></strong></p>
   		  	<% if task.description.present? %><p><%= task.description %><br><% end %>
   		  	Date: <%= task.created_at.strftime("%F") %></p>
   		  	<hr>
